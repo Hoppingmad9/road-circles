@@ -23,6 +23,15 @@ if (cleanData) {
 // const mostNorthernNode = db.prepare(`SELECT * FROM unique_nodes ORDER BY lat DESC LIMIT 1`).all()
 // console.log(mostNorthernNode)
 
+// get northern most node
+// get the way it's part of
+// if part of multiple get the way with the northern most other node 
+// get eastern most node of the way
+// get next way
+// if multiple ways get angle between node and previous node, and the node and all possible next nodes, then rotate CW until the first next node is hit
+// repeat until back at start 
+
+
 function createGeoJSON(convexHullPoints) {
   // Ensure the hull forms a closed loop
   const coordinates = convexHullPoints.map(point => [point.y, point.x]);
